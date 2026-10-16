@@ -1,0 +1,24 @@
+.student-illustration { aspect-ratio: 150 / 172; }
+.hero-student-face { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.hero-student-face svg { display: block; width: 100%; height: 100%; }
+.hero-student-calm { opacity: 1; }
+.hero-student-overwhelmed { opacity: 0; }
+.info-chaos-paper,
+.info-headline-line,
+.info-missed-deadline { backface-visibility: hidden; }
+.profile-links .profile-portfolio-link { display: flex; min-height: 34px; align-items: center; justify-content: center; gap: 4px; border: 2px solid var(--ink); border-radius: 8px; padding: 5px 6px; color: var(--ink); font-size: 8px; font-weight: 700; line-height: 1; text-decoration: none; transition: background-color 160ms ease, color 160ms ease; }
+.profile-links .profile-portfolio-link i { border-radius: 3px; background: var(--yellow); padding: 2px 3px; font-size: 6px; font-style: normal; }
+.profile-links .profile-portfolio-link:hover, .profile-links .profile-portfolio-link:focus-visible { background: var(--ink); color: var(--white); }
+.profile-links .profile-portfolio-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.final-cta { margin-top: 0; }
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .hero-student-calm { opacity: 0; }
+  .hero-student-overwhelmed { opacity: 1; }
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .info-chaos-paper,
+  .info-headline-line,
+  .info-missed-deadline { will-change: transform, opacity; }
+}
